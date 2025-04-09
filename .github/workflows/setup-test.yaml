@@ -6,6 +6,8 @@ on:
 jobs:
   test-setup:
     runs-on: ubuntu-latest
+    env:
+      BUILD: ./selfdrive/test/docker_build.sh
     steps:
       - name: Checkout code
         uses: actions/checkout@v3   # 👈 This MUST run before the local action
