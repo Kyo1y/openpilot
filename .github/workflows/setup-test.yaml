@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v3   # 👈 This MUST run before the local action
 
       - name: Run setup-with-retry
-        uses: ./.github/setup-with-retry
+        uses: ./.github/workflows/setup-with-retry
         with:
           sleep_time: 0
           docker_hub_pat: ""
