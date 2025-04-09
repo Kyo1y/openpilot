@@ -7,7 +7,8 @@ jobs:
   test-setup:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3   # 👈 This MUST run before the local action
 
       - name: Run setup-with-retry
         uses: ./.github/setup-with-retry
