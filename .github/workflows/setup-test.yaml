@@ -1,0 +1,16 @@
+name: Test Setup With Retry
+
+on:
+ workflow_dispatch:
+
+jobs:
+ test-setup:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: actions/checkout@v3
+
+   - name: Run setup-with-retry
+     uses: ./.github/setup-with-retry
+     with:
+      sleep_time: 0
+      docker_hub_pat: ""
